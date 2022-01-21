@@ -1,32 +1,29 @@
-var cdc = document.querySelector('#cdc');
-cdc.style.display = ('none')
 var selecao = document.querySelector('#selecao');
-
 selecao.addEventListener('input', function(){
-    if(selecao.value == 'cdc'){
-        cdc.style.display = ('')
-    } else {
+    var cdc = document.querySelector('#cdc');    
+    if(selecao.value != 'cdc'){
         cdc.style.display = ('none')
+    } else {
+        cdc.style.display = ('block')
     }
 })
 var btn = document.querySelector('.btn');
-var radioRes
-
-// btn.onclick = function (){
-//     var codiDecodi = document.getElementsByName('codi');
-//     for ( var i = 0; i < codiDecodi.length; i++){
-//         if(codiDecodi[i].value === 'codificar'){
-//             btn.textContent = 'aooobaa'
-//         }
-//     }
-// }
-// selecao.addEventListener('click', function(){
-//    if(codigo.checked == true ){
-//         cdc.style.display = ('');}
+var codificar = document.querySelector('.radioCodi')
+codificar.addEventListener('click',function () {
+    var radioBtn = document.getElementsByName('codi')
+    for (var i = 0; i < radioBtn.length; i++){
+        if(radioBtn[i].checked && radioBtn[i].value == 'Codificar'){
+            btn.value = radioBtn[i].value
+        }
+    }
+})
+var decodificar = document.querySelector('.radioDecodi')
+decodificar.addEventListener('click',function () {
+    var radioBtn = document.getElementsByName('codi')
+    for (var i = 0; i < radioBtn.length; i++){
+        if(radioBtn[i].checked){
+            btn.value = radioBtn[i].value
+        }
+    }
     
-// })
-// var base64 = document.querySelector('#base64');
-// base64.addEventListener('click', function(){
-//     cdc.style.display = ('none');
-// })
-
+})

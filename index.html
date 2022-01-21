@@ -19,7 +19,7 @@
             <fieldset>
                 <div class="campo">
                     <label for="msg">Digite aqui a sua mensagem</label>
-                    <input type="text" name="msg" id="msg" required>
+                    <textarea name="msg" id="mensagem" cols="30" rows="5"></textarea>
                 </div>
             </fieldset>
             <div class="campo">
@@ -39,17 +39,21 @@
             <div class="campo" id="codiDecodi">
                 <label> Você gostaria de Codificar ou Decoficar?</label>
                 <label>
-                    <input type="radio" name="codi" value="codificar"> Codificar
+                    <input type="radio" name="codi" value="Codificar" class="radioCodi"> Codificar
                 </label>
                 <label>
-                    <input type="radio" name="codi" value="decodificar"> Decodificar
+                    <input type="radio" name="codi" value="Decodificar"class="radioDecodi"> Decodificar
                 </label>
             </div>
             <div class="campo">
-                <input type="button" i value="Codificar" class="btn" id='codificador'>
+                <input type="button"  value="Coidificar ou Decodificar" class="btn" id='codificador'>
             </div>
         </form>
 
+    </div>
+    <div class="campo">
+        <label for="msg">Aqui está o resultado.</label>
+        <textarea name="msg" id="resposta" cols="30" rows="5"></textarea>
     </div>
     <script src="./js/decifra.js"></script>
 </body>
