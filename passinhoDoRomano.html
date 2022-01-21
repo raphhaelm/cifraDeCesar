@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passinho do Romano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="campo">
+        <h1 id="titulo">Mensagens codificadas</h1>
+        <p id="subtitulo">Digite a sua mensagem,<br> selecione a codificação <br> e escolha Codificar ou Decodificar</p>
+    </div>
+    <div class="container">
+        <form>
+            <fieldset>
+                <div class="campo">
+                    <label for="msg">Digite aqui a sua mensagem</label>
+                    <input type="text" name="msg" id="msg" required>
+                </div>
+            </fieldset>
+            <div class="campo">
+                <label for="">Defina aqui qual a codificação</label>
+                <select name="tipo" id="selecao" required>
+                    <option selected disabled value="">Selecione</option>
+                    <option value="cdc">Cifra de Cesar</option>
+                    <option value="b64">Base 64</option>
+                </select>
+            </div>
+            <div class="campo" id="cdc" >
+                <label for="">Incremento da cifra de cesar </label>
+                <input type="text" >
+
+            </div>
+
+            <div class="campo" id="codiDecodi">
+                <label> Você gostaria de Codificar ou Decoficar?</label>
+                <label>
+                    <input type="radio" name="codi" value="codificar"> Codificar
+                </label>
+                <label>
+                    <input type="radio" name="codi" value="decodificar"> Decodificar
+                </label>
+            </div>
+            <div class="campo">
+                <input type="button" i value="Codificar" class="btn" id='codificador'>
+            </div>
+        </form>
+
+    </div>
+    <script src="decifra.js"></script>
+</body>
+
+</html>
