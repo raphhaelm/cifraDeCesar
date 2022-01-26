@@ -99,3 +99,25 @@ fieldset.grupo .campo {
 footer{
     margin-top: 12%;
 }
+
+@media (max-width: 550px){
+    body{
+        height: 110vh;
+        margin-left: 5%;        
+        margin-top: 10%;
+        font-size: 10px;
+    }
+    
+    .btn{
+        margin-top: 50%;
+        left: 30%;
+
+    }
+    footer {
+        display: none;
+    }
+    #titulo {
+        margin-left: 0%;
+
+    }
+}
