@@ -75,7 +75,7 @@ fieldset.grupo .campo {
     box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
     text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.5);
     position: absolute;
-    margin-top: 19%;
+    margin-top: 10%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -97,5 +97,5 @@ fieldset.grupo .campo {
     background-color: indigo;
 }
 footer{
-    margin-top: 20%;
+    margin-top: 12%;
 }

@@ -58,7 +58,7 @@ codificar.addEventListener('click', function () {
 decodificar.addEventListener('click', function () {
     var radioBtn = document.getElementsByName('codi')
     for (var i = 0; i < radioBtn.length; i++) {
-        if (radioBtn[i].checked && radioBtn[i].value == 'Decodificar' && selecao.value != 'cdc') {
+        if (radioBtn[i].checked && radioBtn[i].value == 'Decodificar' && selecao.value == 'b64') {
             btn.value = radioBtn[i].value
             btn.onclick = function () {
                 var decodifica = suaMensagem.value;
@@ -66,7 +66,25 @@ decodificar.addEventListener('click', function () {
                 suaResposta.innerHTML = msgDecodificada;
             }
         } else if (radioBtn[i].checked && radioBtn[i].value == 'Decodificar' && selecao.value == 'cdc') {
-            btn.value = radioBtn[i].value
+            btn.value = radioBtn[i].value;
+            btn.addEventListener('click', function() {
+                var mensagem = suaMensagem.value;
+              mensagem = mensagem.split("");
+              key = parseInt(key, 10);
+              var codigo = "";
+              for (var i = 0; i < mensagem.length; i++) {
+                var charCode = mensagem[i].charCodeAt();
+                if (charCode >= 65 && charCode <= 90) {
+                  codigo += String.fromCharCode(((charCode - key - 90) % 26) + 90);
+                } else if (charCode >= 97 && charCode <= 122) {
+                  codigo += String.fromCharCode(((charCode - key - 122) % 26) + 122);
+                } else {
+                  codigo += mensagem[i];
+                }
+              }
+              resposta.innerText = codigo;
+            })
+
         }
     }
 });
