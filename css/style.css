@@ -1,22 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-#titulo{
+
+#titulo {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: yellowgreen;
     margin-left: 10%;
 }
-#subtitulo{
+
+#subtitulo {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: rgb(163, 200, 87);
     margin-left: 10%;
     font-style: italic;
 }
-fieldset{
+
+fieldset {
     border: 0;
 }
-body{
+
+body {
     background-color: whitesmoke;
     font-family: Times New Roman, 'Times', serif;
     font-size: 1em;
@@ -24,54 +28,74 @@ body{
     margin-left: 36%;
     margin-top: 2%;
     justify-content: center;
+    height: 100vh;
 }
-input, select, button, textarea{
-    border-radius:  5px;
+
+input, select, button, textarea {
+    border-radius: 5px;
 }
+
 .campo {
     margin-bottom: 1em;
 }
+
 .campo label {
     margin-bottom: 00.2em;
     color: yellowgreen;
     display: block;
 }
+
 fieldset.grupo .campo {
     float: left;
     margin-right: 1em;
 }
-.campo input[type='text'], .campo select, textarea{
+
+.campo input[type='text'], .campo select, textarea {
     padding: 00.2em;
     border: 1px solid yellowgreen;
     box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
     display: block;
 }
+
 .campo select option {
     padding-right: 1em;
 }
+
 .campo input:focus, campo select:focus {
     background: rgb(20, 214, 133);
 }
+
 .btn {
     font-size: 1.2em;
-background: #44a079;
-border: 0;
-margin-bottom: 1em;
-color: #FFFFFF;
-padding: 0.2em 0.6em;
-box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
-text-shadow:  1px 1px 1px rgb(0, 0, 0, 0.5);
-position: absolute;
-top: 90%;
-left: 50%;
-margin-right: -50%;
-transform: translate(-50%, -50%);
+    background: #44a079;
+    border: 0;
+    margin-bottom: 1em;
+    color: #FFFFFF;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.5);
+    position: absolute;
+    margin-top: 19%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
-.btn:hover{
+
+.btn:hover {
     background: #749c8c;
     box-shadow: inset 2px 2px 2px rgb(0, 0, 0, 0.2);
     text-shadow: none;
 }
-#cdc{
-    display:none;
+
+#cdc {
+    display: none;
+}
+
+.test {
+    width: 50px;
+    height: 50px;
+    background-color: indigo;
+}
+footer{
+    margin-top: 20%;
 }
